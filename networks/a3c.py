@@ -61,7 +61,6 @@ class _BaseACNet(_BaseNetwork):
         self.vars.advantage = tf.placeholder(tf.float32, [None], name="advantage")
         self.vars.R = tf.placeholder(tf.float32, [None], name="R")
         # TODO add summaries for entropy, policy and value
-
         log_pi = tf.log(tf.clip_by_value(self.ops.pi, 1e-20, 1.0))
         entropy = -tf.reduce_sum(self.ops.pi * log_pi)
         chosen_pi_log = gather_2d(log_pi, self.vars.a)

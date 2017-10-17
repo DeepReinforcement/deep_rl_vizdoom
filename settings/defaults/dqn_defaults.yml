@@ -11,7 +11,7 @@ frozen_steps: 5000
 update_pattern: [4, 4]
 
 # Training params
-train_steps_per_epoch: 1000000
+train_steps_per_epoch: 1000
 rmsprop:
   epsilon: 1e-10
   decay: 0.99
